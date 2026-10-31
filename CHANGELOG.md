@@ -1,5 +1,11 @@
 # @helder-studio/storage
 
+## 0.1.2
+
+### Patch Changes
+
+- ec7cb35: Refresh the README: badges, feature list, adapter table and a support link.
+
 ## 0.1.1
 
 ### Patch Changes
