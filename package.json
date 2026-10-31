@@ -1,6 +1,6 @@
 {
   "name": "@helder-studio/storage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny storage adapter contract with web, AsyncStorage, MMKV and in-memory adapters. Zero dependencies, SSR-safe.",
   "keywords": [
     "storage",
