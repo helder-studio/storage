@@ -1,7 +1,18 @@
+<div align="center">
+
 # @helder-studio/storage
 
-One tiny storage contract for React and React Native libraries, with adapters for `localStorage`,
-AsyncStorage, MMKV and memory. Zero dependencies, SSR-safe, never throws.
+**One tiny storage contract for React and React Native libraries.**
+
+Adapters for `localStorage`, AsyncStorage, MMKV and memory. Zero dependencies, SSR-safe, never throws.
+
+[![npm](https://img.shields.io/npm/v/@helder-studio/storage?color=cb3837&logo=npm)](https://www.npmjs.com/package/@helder-studio/storage)
+[![bundle size](https://img.shields.io/bundlejs/size/@helder-studio/storage?label=min%2Bgzip)](https://bundlejs.com/?q=@helder-studio/storage)
+[![CI](https://github.com/helder-studio/storage/actions/workflows/ci.yml/badge.svg)](https://github.com/helder-studio/storage/actions/workflows/ci.yml)
+[![provenance](https://img.shields.io/badge/npm-provenance-2ea44f?logo=sigstore)](https://www.npmjs.com/package/@helder-studio/storage#provenance)
+[![license](https://img.shields.io/npm/l/@helder-studio/storage?color=blue)](./LICENSE)
+
+</div>
 
 ```sh
 npm install @helder-studio/storage
@@ -23,7 +34,22 @@ interface StorageAdapter {
 
 Sync and async adapters share the interface, so consumers `await` every call.
 
+## Features
+
+- 🪶 **Tiny**: under 1 kB, zero dependencies, tree-shakeable ESM + CJS
+- 🌐 **SSR-safe**: nothing touches `localStorage` at import time
+- 🛡️ **Never throws**: private mode, blocked cookies and full quotas fall back to memory
+- 📱 **React Native ready**: AsyncStorage and MMKV v3 / v4, without making either a dependency
+- 🔒 **Signed releases**: published from CI with npm provenance
+
 ## Adapters
+
+| Adapter          | Platform     | Backed by                                   |
+| ---------------- | ------------ | ------------------------------------------- |
+| `webStorage()`   | Web          | `localStorage` / `sessionStorage`           |
+| `asyncStorage()` | React Native | `@react-native-async-storage/async-storage` |
+| `mmkv()`         | React Native | `react-native-mmkv` v3 or v4                |
+| `memory()`       | Anywhere     | An in-memory `Map` (tests, SSR, fallbacks)  |
 
 ### Web: `webStorage()`
 
@@ -80,6 +106,14 @@ export async function loadSettings(storage: StorageAdapter) {
 Neither AsyncStorage nor MMKV is a dependency or peer: both are typed structurally, so your users
 install only what they already use.
 
+## Support
+
+If this saves you time, you can buy me a coffee. It keeps the helder-studio libraries maintained.
+
+<a href="https://buymeacoffee.com/gorian" target="_blank" rel="noopener">
+  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="48">
+</a>
+
 ## License
 
-MIT
+[MIT](./LICENSE) © helder-studio
