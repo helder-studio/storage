@@ -1,5 +1,11 @@
 # @helder-studio/storage
 
+## 0.1.1
+
+### Patch Changes
+
+- eca2dba: Publish through npm trusted publishing with provenance. No code changes.
+
 ## 0.1.0
 
 ### Minor Changes
