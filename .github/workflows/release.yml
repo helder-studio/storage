@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
-          registry-url: https://registry.npmjs.org
+          # No registry-url: it writes an .npmrc with a placeholder NODE_AUTH_TOKEN that shadows OIDC.
       - run: pnpm install --frozen-lockfile
       - run: pnpm verify
       # Pending changesets: open or update the Version Packages PR. Nothing is published here.
