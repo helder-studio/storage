@@ -1,5 +1,7 @@
 # @helder-studio/storage
 
+Shared rules, commands and conventions: @AGENTS.md
+
 The `StorageAdapter` contract shared by quarantine, network-chaos and timewarp, plus four adapters.
 Also the tooling template every other library repo copies (`/new-library`).
 
